@@ -11,15 +11,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class DeleteAndPost extends BaseClass {
-    @Test
-    public void deleteIsSuccessful() throws IOException {
-        HttpDelete request = new HttpDelete("https://api.github.com/repos/cherepanovadr/deleteme");
-        //Basic, OAuth/2, JWT
-        request.setHeader(HttpHeaders.AUTHORIZATION, "token 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");
-        response = client.execute(request);
-        int statusCode = response.getStatusLine().getStatusCode();
-        Assert.assertEquals(statusCode, 204);
-    }
+
+    //these tests will only be passed if token and uri are replaced with valid data
+
 
     @Test
     public void createRepoReturns201() throws IOException {
@@ -43,4 +37,16 @@ public class DeleteAndPost extends BaseClass {
         int statusCode = response.getStatusLine().getStatusCode();
         Assert.assertEquals(statusCode, 201);
     }
+
+    @Test
+    public void deleteIsSuccessful() throws IOException {
+        HttpDelete request = new HttpDelete("https://api.github.com/repos/cherepanovadr/deleteme");
+        //Basic, OAuth/2, JWT
+        request.setHeader(HttpHeaders.AUTHORIZATION, "token myToken");
+        response = client.execute(request);
+        int statusCode = response.getStatusLine().getStatusCode();
+        Assert.assertEquals(statusCode, 204);
+    }
+
+
 }
