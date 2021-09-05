@@ -1,4 +1,3 @@
-import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpPost;
@@ -6,9 +5,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 public class DeleteAndPost extends BaseClass {
 
