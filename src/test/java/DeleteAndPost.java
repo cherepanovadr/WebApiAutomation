@@ -23,7 +23,7 @@ public class DeleteAndPost extends BaseClass {
         request.setHeader(HttpHeaders.AUTHORIZATION, authHeader);
 */
         //Set the JWT auth
-        request.setHeader(HttpHeaders.AUTHORIZATION, "token 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");
+        request.setHeader(HttpHeaders.AUTHORIZATION, "token masked");
 
         //Define Json to Post and set as Entity
         String json = "{\"name\": \"deleteme\"}";
